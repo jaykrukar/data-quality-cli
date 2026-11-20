@@ -1,0 +1,52 @@
+{
+  "valid": false,
+  "rows_checked": 3,
+  "issues_count": 6,
+  "issues_by_code": {
+    "range": 2,
+    "type": 2,
+    "duplicate": 1,
+    "missing": 1
+  },
+  "missing_values_by_column": {
+    "participant": 1
+  },
+  "issues": [
+    {
+      "row": 2,
+      "column": "signal_quality",
+      "code": "range",
+      "message": "Outside maximum bound"
+    },
+    {
+      "row": 3,
+      "column": "collection_date",
+      "code": "type",
+      "message": "Invalid date value"
+    },
+    {
+      "row": 3,
+      "column": "sample_count",
+      "code": "range",
+      "message": "Outside minimum bound"
+    },
+    {
+      "row": 3,
+      "column": "qc_pass",
+      "code": "type",
+      "message": "Invalid bool value"
+    },
+    {
+      "row": 3,
+      "column": "sample_id",
+      "code": "duplicate",
+      "message": "Repeated unique key"
+    },
+    {
+      "row": 4,
+      "column": "participant",
+      "code": "missing",
+      "message": "Required value empty"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "columns": [
+    {"name": "sample_id", "type": "str", "required": true},
+    {"name": "participant", "type": "str", "required": true},
+    {"name": "collection_date", "type": "date", "required": true},
+    {"name": "signal_quality", "type": "float", "required": true, "min": 0, "max": 1},
+    {"name": "sample_count", "type": "int", "required": true, "min": 0},
+    {"name": "qc_pass", "type": "bool", "required": true}
+  ],
+  "unique_by": ["sample_id"]
+}

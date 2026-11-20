@@ -1,0 +1,4 @@
+sample_id,participant,collection_date,signal_quality,sample_count,qc_pass
+s001,anon-01,2026-05-01,1.1,100,true
+s001,anon-02,not-a-date,0.75,-3,maybe
+s003,,2026-05-03,0.8,80,true
