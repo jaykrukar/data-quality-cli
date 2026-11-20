@@ -1,5 +1,7 @@
 # QualityGate — explainable CSV data validation
 
+[![Tests](https://github.com/jaykrukar/data-quality-cli/actions/workflows/tests.yml/badge.svg)](https://github.com/jaykrukar/data-quality-cli/actions/workflows/tests.yml)
+
 A small dependency-free Python CLI that validates CSV datasets using JSON-defined field rules and produces machine-readable reports. An accessible demonstration of **reproducible data quality**, useful in both ML and scientific computing workflows.
 
 ## Run
