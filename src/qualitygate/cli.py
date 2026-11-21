@@ -10,9 +10,11 @@ def main(argv=None) -> int:
     parser.add_argument("csv", type=Path)
     parser.add_argument("schema", type=Path)
     parser.add_argument("--report", type=Path, help="Write JSON report to file")
+    parser.add_argument("--max-issues", type=int, default=1000,
+                        help="Maximum issue details to retain (default: 1000; counts remain complete)")
     args = parser.parse_args(argv)
     try:
-        report = validate_csv(args.csv, load_schema(args.schema))
+        report = validate_csv(args.csv, load_schema(args.schema), max_issues=args.max_issues)
     except (ValueError, OSError, json.JSONDecodeError) as exc:
         parser.error(str(exc))
     output = json.dumps(report, indent=2)
