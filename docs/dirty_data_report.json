@@ -2,6 +2,8 @@
   "valid": false,
   "rows_checked": 3,
   "issues_count": 6,
+  "issues_reported": 6,
+  "issues_truncated": false,
   "issues_by_code": {
     "range": 2,
     "type": 2,

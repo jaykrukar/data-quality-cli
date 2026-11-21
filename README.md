@@ -19,8 +19,9 @@ python -m pytest -q
 ## Features
 
 - Required fields, strict type checks (`str`, `int`, `float`, ISO date, boolean).
-- Numeric min/max, allowed choices, compound uniqueness keys.
+- Numeric min/max, allowed choices, compound uniqueness keys, and configurable numeric cross-field comparisons.
 - Human-readable issue reasons and JSON output useful in CI.
+- Row-by-row CSV reading and a bounded issue-detail report (`--max-issues`); total counts remain complete. Exact unique-key validation retains its key set in memory.
 - Non-zero exit status for schema failures and invalid datasets.
 - No external runtime dependencies.
 
@@ -33,7 +34,7 @@ python -m pytest -q
 
 ## Limits
 
-This is a lightweight prototype, **not** a full JSON Schema or production data governance system. Numeric rules assume finite numeric values; other high-volume data types, regular expressions, cross-field rules, and advanced schema compatibility are not yet included. All examples are fictitious and contain no patient data.
+This is a lightweight prototype, **not** a full JSON Schema or production data governance system. Cross-field comparisons currently support numeric columns only. Exact uniqueness checks use memory proportional to unique keys, and the issue detail limit does not cap memory used by those keys. Regular expressions, advanced schema compatibility, and incremental database output are not included. All examples are fictitious and contain no patient data.
 
 ## Provenance
 
